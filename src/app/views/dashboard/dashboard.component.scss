@@ -1,0 +1,36 @@
+#contai{
+//  text-align: center;
+ margin-bottom: 10px;
+}
+.btn{
+  background-color: #008060 !important;
+  color: white !important;
+}
+.Clogo{
+  height: 100px;
+  width: 41px;
+}
+.flex{
+  display: flex;
+
+}
+#flex{
+  display: flex;
+justify-content: center;
+}
+c-card{
+  max-width: 45.25rem
+}
+.p-component, .p-component *{
+  font-weight: bold;
+}
+p{
+  font-size: 1em;
+color: black;
+margin: 0
+}
+@media only screen and (max-width: 600px) {
+  c-card{
+    width: 100%;
+  }
+}

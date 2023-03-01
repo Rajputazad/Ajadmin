@@ -1,0 +1,149 @@
+<div id="flex">
+    <c-card class="mb-4">
+        <c-card-body>
+            <c-row>
+
+                <form [formGroup]="form" (ngSubmit)="saveDetails(form)">
+                    <!-- <h3 class="text-center w-auto fw-bolder">👤 Profile for portfolio</h3> -->
+                    <h3>ℹ️ Car Information</h3>
+                    <div class=" mb-3 d-flex justify-content-center w-100">
+                        <input (change)="carimg($event)" accept="image/*" multiple type="file"
+                            formControlName="profile" class="form-control border border-success rounded"
+                            id="inputGroupFile01">
+                    </div>
+                    <div class="container">
+                        <div>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Car Name</mat-label>
+                                <input matInput maxlength="50" type="text" placeholder="Type Car Name"
+                                    formControlName="carname" #nameInput>
+                                <mat-hint>Mini character 3: {{ nameInput.value.length }}/3</mat-hint>
+                                <mat-error *ngIf="form.controls['carname'].errors?.['required']">Car Name is
+                                    required</mat-error>
+                                <mat-error *ngIf="form.controls['carname'].errors?.['minlength']">
+                                    Please enter more than 3 character
+                                </mat-error>
+                            </mat-form-field><br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Car Model</mat-label>
+                                <input matInput  type="text" placeholder="Car Model"
+                                    formControlName="model" #nameInput>
+                                <mat-hint>Mini character 3: {{ nameInput.value.length }}/3</mat-hint>
+                                <mat-error *ngIf="form.controls['model'].errors?.['required']">Car Name is
+                                    required</mat-error>
+                            </mat-form-field>
+                            <br><br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Car History:</mat-label>
+                                <input matInput type="text" formControlName="history"
+                                    placeholder="Accidental/Non-Accidental">
+                                <mat-error *ngIf="form.controls['history'].errors?.['required']">Car History is
+                                    required</mat-error>
+                            </mat-form-field>
+
+
+                            <br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Kilometers Driven</mat-label>
+                                <input matInput maxlength="30" type="text" placeholder="Eg:10000"
+                                    formControlName="kilometers" #schoolInput>
+                                <mat-hint>Eg:10000</mat-hint>
+                                <mat-error *ngIf="form.controls['kilometers'].errors?.['required']">Kilometers
+                                    Driven is
+                                    required</mat-error>
+
+                            </mat-form-field>
+
+
+                        </div>
+                        <div>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Last Service</mat-label>
+                                <input matInput type="text" formControlName="service" placeholder="D/M/Y">
+                                <!-- <mat-hint>Input the fully qualified email address</mat-hint> -->
+                                <mat-error *ngIf="form.controls['service'].errors?.['required']">Last Service is
+                                    required</mat-error>
+                            </mat-form-field>
+                            <br>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Registration</mat-label>
+                                <input matInput maxlength="30" type="text" placeholder="Registration"
+                                    formControlName="registration" #CollageInput>
+                                <mat-hint>GJ-1-x-xxxx</mat-hint>
+                                <mat-error *ngIf="form.controls['registration'].errors?.['required']">Registration is
+                                    required</mat-error>
+                            </mat-form-field><br><br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Owner</mat-label>
+                                <input matInput maxlength="30" type="text" placeholder="Owner" formControlName="owner">
+                                <mat-error *ngIf="form.controls['owner'].errors?.['required']">Owner is
+                                    required</mat-error>
+
+                            </mat-form-field><br>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Fuel Type:</mat-label>
+                                <input matInput placeholder="Petrol/Diesel/CNG..." type="text" formControlName="fuel">
+                                <mat-hint>Petrol/Diesel/CNG...</mat-hint>
+                                <mat-error *ngIf="form.controls['fuel'].errors?.['required']">Fuel type is
+                                    required</mat-error>
+                            </mat-form-field><br>
+
+<br>
+                        </div>
+                        <div>
+
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Transmission:</mat-label>
+                                <input matInput placeholder="Petrol/Diesel/CNG.." type="text"
+                                    formControlName="transmission">
+                                <mat-hint>Manual/Auto</mat-hint>
+                                <mat-error *ngIf="form.controls['transmission'].errors?.['required']">Transmission is
+                                    required</mat-error>
+                            </mat-form-field><br>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Insurance:</mat-label>
+                                <input matInput placeholder="Insurance" type="text" formControlName="insurance">
+                                <mat-error *ngIf="form.controls['insurance'].errors?.['required']">Insurance is
+                                    required</mat-error>
+                            </mat-form-field><br>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Price:</mat-label>
+                                <input (keypress)="phone($event)" matInput type="number" formControlName="price"
+                                    placeholder="Price">
+                                <mat-hint>eg-1700000</mat-hint>
+                                <mat-error *ngIf="form.controls['price'].errors?.['required']">Price is
+                                    required</mat-error>
+                            </mat-form-field> <br>
+
+                            <mat-form-field class="mb-4" appearance="fill">
+                                <mat-label>Car Description:</mat-label>
+                                <textarea matInput placeholder="Car Description"
+                                    formControlName="description"></textarea>
+                                <mat-hint> If Any information related to car</mat-hint>
+                            </mat-form-field>
+
+<br>
+
+                        </div>
+                        
+                    </div>
+                    <div mat-dialog-actions align="end">
+                        <button  mat-raised-button color="primary" type="submit"
+                            [disabled]="!form.valid">Submit</button>
+
+                        &nbsp;
+                        <button mat-raised-button id="butt" type="button" routerLink="/Dashboard">Cancel</button>
+                    </div>
+                </form>
+                <!-- <div>{{ form.value | json }}</div> -->
+
+            </c-row>
+        </c-card-body>
+    </c-card>
+</div>

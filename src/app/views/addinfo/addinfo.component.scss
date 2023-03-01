@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+mat-form-field{
+  width: 263px;
+}
+.rounded{
+  width: 263px;
+
+}
+h3{
+    text-align: center;
+}
+@media only screen and (max-width: 1160px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  #butt{
+    background-color: red;
+    color: white;
+  }
+  #butt2{
+    background-color: green;
+    color: white;
+  }

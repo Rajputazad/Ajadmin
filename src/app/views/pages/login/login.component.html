@@ -1,0 +1,59 @@
+<video autoplay muted loop id="myVideo">
+  <source src="https://res.cloudinary.com/dwdiznfyj/video/upload/v1676885508/webBuilder/video_ey9sdr.mp4" type="video/mp4" >
+  Your browser does not support HTML5 video.
+</video>
+ <div class="d-flex justify-content-center align-items-center w-100 h-100">
+  <div class="card p-5  w-auto" >
+              <form  [formGroup]="form" (ngSubmit)="onSubmit()" cForm>
+                <h1>Login</h1>
+                <p class="text-medium-emphasis">Sign In to your account</p>
+                <c-input-group class="mb-3">
+
+                  <span cInputGroupText>@</span>
+
+
+                  <input formControlName="email" autoComplete="email" cFormControl placeholder="Email" />
+
+                </c-input-group>
+                <div class="errors">
+                  <p class="error"
+                    *ngIf="form.controls['email'].errors?.['required'] && form.controls['email']?.touched">Email is
+                    required</p>
+                  <p class="error" *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid
+                    email</p>
+
+                </div>
+                <c-input-group class="mb-3">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilLockLocked"></svg>
+                  </span><div>
+                    <input  formControlName="password" autoComplete="current-password" cFormControl placeholder="Password"
+                      type="{{type}}" />
+                      <i (click)="showP()" class={{class}} id="togglePassword"></i>
+                  </div>
+                  </c-input-group>
+                  <div class="errors ">
+                    <p class="error "
+                      *ngIf="form.controls['password'].errors?.['required'] && form.controls['password']?.touched">Password is
+                      required</p>
+                  </div><br class="br">
+                <c-row class>
+                  <c-col xs="6">
+                    <button mat-raised-button color="primary" [disabled]="!form.valid"  type="submit"  class="px-4" color="primary">
+                      Login
+                    </button>
+                  </c-col>
+                  <c-col class="text-right col-mb-4" xs="6">
+                    <a   class="px-0" color="link">
+                      Forgot password?
+                    </a>
+                  </c-col>
+                </c-row><br>
+                <div class="text-center"><h5 aria-level="5">New to WebBuilder?</h5></div>
+                <div id="" style="display:flex ; justify-content: center;" >
+                    <p style="  color: rgb(193, 76, 76);"><a routerLink="/register">
+                      Create your account
+                    </a></p>
+                  </div>
+    </form>
+ </div>

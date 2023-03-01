@@ -1,0 +1,64 @@
+<!-- <video autoplay muted loop id="myVideo">
+  <source src="https://res.cloudinary.com/dwdiznfyj/video/upload/v1676885508/webBuilder/video_ey9sdr.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+ <div class="d-flex justify-content-center align-items-center w-100 h-100">
+  <div class="card p-5  w-auto" >
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" cForm>
+              <h1>Register</h1>
+              <p class="text-medium-emphasis">Create your account</p>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input  formControlName="name" autoComplete="name" cFormControl placeholder="Name" />
+              </c-input-group>
+              <div class="errors">
+                <p class="error"
+                  *ngIf="form.controls['name'].errors?.['required'] && form.controls['name']?.touched">Name is
+                  required</p>
+                <p class="error" *ngIf="form.controls['name'].hasError('minlength')"> Must have minimum of 2 characters</p>
+              </div>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>@</span>
+                <input  formControlName="email"autoComplete="email" cFormControl placeholder="Email" />
+              </c-input-group>
+              <div class="errors">
+                <p class="error"
+                  *ngIf="form.controls['email'].errors?.['required'] && form.controls['email']?.touched">Email is
+                  required</p>
+                <p class="error" *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid
+                  email</p>
+              </div>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <div>
+                  <input formControlName="password" autoComplete="new-password" cFormControl placeholder="Password" type="{{type}}" />
+                  <i (click)="showP()" class={{class}} id="togglePassword"></i>
+
+                </div>
+
+              </c-input-group>
+              <div class="errors">
+                <p class="error"
+                  *ngIf="form.controls['password'].errors?.['required'] && form.controls['password']?.touched">Password is
+                  required</p>
+                <p class="error" *ngIf="form.controls['password'].hasError('minlength')">Must have minimum of 8 characters</p>
+              </div>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input (input)="get()" formControlName="re_password" autoComplete="new-password" cFormControl placeholder="Repeat password" type="password" />
+              </c-input-group>
+            
+              <div class="d-grid mb-3">
+                <button  class="px-4 btn btn-success" [disabled]="!form.valid" id="btn" mat-raised-button  type="submit"   >Create Account</button>
+              </div>
+              <h5 routerLink="/login" class="text-center " >Login?</h5>
+            </form>
+          </div>
+ </div>
+  -->

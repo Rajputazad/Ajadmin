@@ -1,0 +1,28 @@
+<c-card class="mb-4">
+    <c-card-body>
+        <div class="container-fluid">
+            <form [formGroup]="form" (ngSubmit)="saveDetails()">
+                <div class="row ">
+                    <div class="col-sm">
+                        <h3 class="text-center w-auto fw-bolder">👤 Profile for portfolio</h3>
+                        <div class="input-group mb-3">
+                            <input (change)="profile($event)" accept="image/*" type="file" formControlName="profile" class="form-control border border-success rounded"
+                                id="inputGroupFile01">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <h3 class="text-center w-auto fw-bolder">📂 Resume for portfolio</h3>
+                        <div class="input-group  mb-3">
+                            <input (change)="resume($event)" type="file" formControlName="resume" class="form-control border border-success rounded" id="inputGroupFile01">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group  " role="group" aria-label="Basic example">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+    </c-card-body>
+</c-card>
