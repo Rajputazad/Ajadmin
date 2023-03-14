@@ -11,11 +11,11 @@ export class UserinfoService {
   constructor(private http :HttpClient) { 
   }
 
-userinfo(data:any){
-  return this.http.post(this.Baseurl+"userinfo",data)
+carinfo(data:any){
+  return this.http.post(this.Baseurl+"upload",data)
 }
-getuser(_id:any){
-  return this.http.get(this.Baseurl+"userinfo/"+_id)
+carifoget(){
+  return this.http.get(this.Baseurl+"cars")
 }
 
 updateuser(data:any){

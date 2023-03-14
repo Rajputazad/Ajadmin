@@ -23,7 +23,7 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { UsersComponent } from './views/users/users.component';
 import { ProfileComponent } from './views/profile/profile.component';
-import { AddassetsComponent } from './views/addassets/addassets.component';
+import { AddassetsComponent } from './views/Cars/addassets.component';
 import { AddinfoComponent } from './views/addinfo/addinfo.component';
 import { CustomThemeComponent } from './views/custom-theme/custom-theme.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {

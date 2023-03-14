@@ -10,7 +10,7 @@ import { UsersComponent } from './views/users/users.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { AddinfoComponent } from './views/addinfo/addinfo.component';
 import { CustomThemeComponent } from './views/custom-theme/custom-theme.component';
-import { AddassetsComponent } from './views/addassets/addassets.component';
+import { AddassetsComponent } from './views/Cars/addassets.component';
 
 const routes: Routes = [
   {

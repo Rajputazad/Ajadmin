@@ -90,6 +90,13 @@
                                 <mat-error *ngIf="form.controls['fuel'].errors?.['required']">Fuel type is
                                     required</mat-error>
                             </mat-form-field><br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Number Plate:</mat-label>
+                                <input matInput placeholder="Number Plate" type="text" formControlName="numberplate">
+                                <mat-hint>Eg:Gj-01-XXXX</mat-hint>
+                                <mat-error *ngIf="form.controls['numberplate'].errors?.['numberplate']">Fuel type is
+                                    required</mat-error>
+                            </mat-form-field><br>
 
 <br>
                         </div>
@@ -114,7 +121,7 @@
 
                             <mat-form-field appearance="fill">
                                 <mat-label>Price:</mat-label>
-                                <input (keypress)="phone($event)" matInput type="number" formControlName="price"
+                                <input (keypress)="Price($event)" matInput type="number" formControlName="price"
                                     placeholder="Price">
                                 <mat-hint>eg-1700000</mat-hint>
                                 <mat-error *ngIf="form.controls['price'].errors?.['required']">Price is
