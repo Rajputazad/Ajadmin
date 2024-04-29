@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  title = 'AJMotors';
+  title = 'GMotors';
  
   constructor(
     private router: Router,

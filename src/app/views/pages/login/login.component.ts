@@ -13,7 +13,7 @@ export class LoginComponent {
   form: FormGroup = new FormGroup({});
   ngOnInit(): void {
     this.form = this.fb.group({
-      email: [null, [Validators.required, Validators.pattern("^[A-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      mobile: [null, [Validators.required]],
       password:["",[Validators.required,]]
     });
   }

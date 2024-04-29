@@ -12,15 +12,15 @@
                   <span cInputGroupText>@</span>
 
 
-                  <input formControlName="email" autoComplete="email" cFormControl placeholder="Email" />
+                  <input formControlName="mobile" autoComplete="mobile" cFormControl placeholder="mobile" />
 
                 </c-input-group>
                 <div class="errors">
                   <p class="error"
-                    *ngIf="form.controls['email'].errors?.['required'] && form.controls['email']?.touched">Email is
+                    *ngIf="form.controls['mobile'].errors?.['required'] && form.controls['mobile']?.touched">Email is
                     required</p>
-                  <p class="error" *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid
-                    email</p>
+                  <!-- <p class="error" *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid
+                    email</p> -->
 
                 </div>
                 <c-input-group class="mb-3">
@@ -50,10 +50,10 @@
                   </c-col>
                 </c-row><br>
                 <div class="text-center"><h5 aria-level="5">New to WebBuilder?</h5></div>
-                <div id="" style="display:flex ; justify-content: center;" >
+                <!-- <div id="" style="display:flex ; justify-content: center;" >
                     <p style="  color: rgb(193, 76, 76);"><a routerLink="/register">
                       Create your account
                     </a></p>
-                  </div>
+                  </div> -->
     </form>
  </div>

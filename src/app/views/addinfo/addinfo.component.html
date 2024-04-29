@@ -6,10 +6,9 @@
                 <form [formGroup]="form" (ngSubmit)="saveDetails(form)">
                     <!-- <h3 class="text-center w-auto fw-bolder">👤 Profile for portfolio</h3> -->
                     <h3>ℹ️ Car Information</h3>
-                    <div class=" mb-3 d-flex justify-content-center w-100">
-                        <input (change)="carimg($event)" accept="image/*" multiple type="file"
-                            formControlName="profile" class="form-control border border-success rounded"
-                            id="inputGroupFile01">
+                    <div class="mb-3 d-flex justify-content-center w-100">
+                        <input (change)="onFileSelected($event)" accept="image/*" type="file"
+                               class="form-control border border-success rounded" id="inputGroupFile01">
                     </div>
                     <div class="container">
                         <div>
